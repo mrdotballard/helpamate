@@ -1,0 +1,15 @@
+{
+  "name": "helpamate",
+  "version": "1.0.0",
+  "description": "Web app for your friends to help you get the things you need done, done.",
+  "main": "app.js",
+  "scripts": {
+    "test": "app.js"
+  },
+  "author": "Matthew Ballard",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.7.1",
+    "express": "^4.17.1"
+  }
+}
