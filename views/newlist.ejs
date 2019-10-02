@@ -1,8 +1,59 @@
 <% include partials/header %>
 
-<h1>Add a List</h1>
 
-<form action="/mateslists" method="POST">
+<div class="ui main container">
+
+
+  <div class="ui  grid">
+    <div class="  seven wide column centered ">
+      <div class="ui huge header centered">Add a List</div>
+
+      <div class="ui olive inverted segment">
+        <div class="ui inverted form">
+          <!-- <div class="two fields"> -->
+          <div class="new-list-form">
+            <form action="/mylists" method="POST">
+              <div class="field">
+                <label>Enter List's Name</label>
+                <div class="sixteen wide field">
+                  <input name="title" placeholder="Name" type="text">
+                </div>
+              </div>
+              <div class="field">
+                <label>Enter Items</label>
+                <div class="sixteen wide field">
+                  <ul id="new-list">
+                    <li class="item"><input type="text" name="item1"></li>
+                  </ul>
+                </div>
+              </div>
+              <!-- </div> -->
+
+              <select class="ui dropdown bulk-input">
+                <option value="" selected>Bulk</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+              </select>
+              <button class="ui button" id="another-item" type="button">Add another item</button>
+              <div>
+                <button id="new-list-submit" class="ui green submit button">Submit</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- 
+<form action="/mylists" method="POST">
   <label for="title">Enter list title</label>
   <input type="text" name="title" placeholder="title">
   <ul>
@@ -11,7 +62,7 @@
   </ul>
   <button id="another-item" type="button">Add another item</button>
   <button>submit</button>
-</form>
+</form> -->
 
 <% include partials/footer %>
 
