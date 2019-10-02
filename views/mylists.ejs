@@ -1,0 +1,75 @@
+<% include partials/header %>
+
+
+<div class="ui container">
+  <div class="ui huge header ">&ltuser&gt's List</div>
+
+
+  <a class="ui basic primary button" href="/mylists/new">Add new list</a>
+
+  <div class="ui container">
+    <div class="ui grid">
+      <div class="three column row">
+        <% myLists.forEach(function(list) { %>
+        <div class="column">
+          <div class="ui card">
+            <div class="content">
+              <div class="header"><%= list.title %></div>
+            </div>
+            <div class="content">
+              <!-- <h4 class="ui sub header">Activity</h4> -->
+              <div class="ui small feed">
+                <div class="event">
+                  <div class="content">
+                    <div class="summary">
+                      <% list.items.forEach(function(item) { %>
+                      <li><%= item %></li>
+                      <% }); %>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="ui bottom attached button">
+              <i class="add icon"></i>
+              Add Friend
+            </div>
+            <!-- <div class="extra content">
+            <button class="ui button">Join Project</button>
+          </div> -->
+          </div>
+        </div>
+        <% }); %>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <a href="/">back home</a>
+
+  <% include partials/footer %>
+
+
+</div>
+
+<!-- <div class="ui four column doubling stackable grid container">
+  <div class="column">
+    <p></p>
+    <p></p>
+  </div>
+  <div class="column">
+    <p></p>
+    <p></p>
+  </div>
+  <div class="column">
+    <p></p>
+    <p></p>
+  </div>
+  <div class="column">
+    <p></p>
+    <p></p>
+  </div>
+</div> -->
